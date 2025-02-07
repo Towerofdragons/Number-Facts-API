@@ -26,7 +26,9 @@ SECRET_KEY = os.getenv("SECRET_KEY", 'django-insecure-gfdua1*dn3a&g@s5u(iss#&so!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+  "number-facts-api-r8lg.onrender.com"
+]
 
 REST_FRAMEWORK ={
   "DEFAULT_RENDERER_CLASSES" : ["rest_framework.renderers.JSONRenderer"]
