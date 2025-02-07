@@ -3,6 +3,7 @@
 
 ## Overview
 The **Number Classification API** is a Django REST API that classifies a given number based on its mathematical properties. It determines whether a number is prime, perfect, or an Armstrong number, calculates the sum of its digits, and provides a fun fact if applicable.
+The Fun facts are sourced from [NumbersAPI](http://numbersapi.com) api.
 
 ## Features
 - Accepts a number as a query parameter in a GET request.
@@ -15,7 +16,7 @@ The **Number Classification API** is a Django REST API that classifies a given n
   - Provides a **fun fact** about the number (if applicable).
 - Returns proper HTTP status codes for success and errors.
 
-## Technologies Used
+## Technologies
 - **Django** (Backend Framework)
 - **Django REST Framework (DRF)** (API Development)
 - **Python 3**
@@ -81,6 +82,3 @@ GET http://127.0.0.1:8000/api/classify-number?number=371
 }
 ```
 
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
