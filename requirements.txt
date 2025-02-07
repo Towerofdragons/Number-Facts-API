@@ -1,3 +1,4 @@
 Django>=4.0,<5.0
 DjangoRESTFramework>=3.14,<4.0
 django-cors-headers
+gunicorn
