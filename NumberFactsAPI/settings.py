@@ -27,7 +27,8 @@ SECRET_KEY = os.getenv("SECRET_KEY", 'django-insecure-gfdua1*dn3a&g@s5u(iss#&so!
 DEBUG = True
 
 ALLOWED_HOSTS = [
-  "number-facts-api-r8lg.onrender.com"
+  "number-facts-api-r8lg.onrender.com",
+  "127.0.0.1"
 ]
 
 REST_FRAMEWORK ={

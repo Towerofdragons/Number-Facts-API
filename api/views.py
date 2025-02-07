@@ -29,12 +29,18 @@ class get_fact(APIView):
       
       return Response(data, status=status.HTTP_400_BAD_REQUEST)
     
+    properties = []
+    if utils.is_armstrong(number):
+        properties.append("armstrong")
+
+    properties.append("odd" if number % 2 else "even")
+    
     try:
       response = FetchNumberAPI(number)
-      text = response.get("text")
+      text = response.get("text", "No Fact available.")
       print(response)
     except Exception:
-      Response({"Error": "something went wrong"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+      return Response({"Error": "something went wrong"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
     
@@ -42,7 +48,7 @@ class get_fact(APIView):
             "number" : number,
             "is_prime" : utils.is_prime(number),
             "is_perfect" : utils.is_perfect(number),
-            "properties" : [].append(utils.is_armstrong(number)),
+            "properties" : properties,
             "digit_sum" : utils.digit_sum(number),
             "fun_fact" : text
             }
